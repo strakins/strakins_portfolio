@@ -40,7 +40,7 @@ const Hero = () => {
             {social_media?.map((icon, index) => (
               <div
                 key={index}
-                className="text-gray-600 hover:text-white cursor-pointer "
+                className="text-gray-500 hover:text-white cursor-pointer "
               >
                 <a href={icon.url} target="_blank" rel="noopener noreferrer"><ion-icon name={icon.logo}></ion-icon></a>
               </div>
