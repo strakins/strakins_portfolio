@@ -14,34 +14,27 @@ const Project = () => {
   const projects = [
     {
       img: project1,
-      name: "Movie App",
-      github_link: "https://github.com/Sridhar-C-25",
-      live_link: "https://myreactflix.netlify.app",
+      name: "Ratings App",
+      github_link: "https://github.com/strakins/ratings_app",
+      live_link: "https://strakins.github.io/ratings_app/",
     },
     {
-      img: project2,
-      name: "Job search Web App",
-      github_link: "https://github.com/Sridhar-C-25/jobsearchapp",
-      live_link: "https://myjobsearch.netlify.app",
-    },
-    {
-      img: project3,
-      name: "Highking",
-      github_link: "https://github.com/Sridhar-C-25/highking",
-      live_link: "https://highking01.netlify.app",
+      img: "https://github.com/strakins/kodecamp/blob/main/devdetails.jpg",
+      name: "Portfolio Site",
+      github_link: "https://github.com/strakins/Developers-Details/tree/master",
+      live_link: "https://strakins.github.io/Developers-Details/",
     },
     {
       img: project4,
-      name: "React Nav",
-      github_link:
-        "https://github.com/Sridhar-C-25/reacttailwindnavbar-with-dropdown",
-      live_link: "https://reacttailwindnavbar.netlify.app",
+      name: "Traing Services",
+      github_link: "https://github.com/strakins/Totalink-Web-Services",
+      live_link: "https://totalinkservices.vercel.app/contact_us.html",
     },
     {
       img: project5,
-      name: "Vue Country",
-      github_link: "https://github.com/Sridhar-C-25",
-      live_link: "https://vuecountry05.netlify.app",
+      name: "Country Demography",
+      github_link: "https://github.com/strakins/countries_demography/tree/master",
+      live_link: "https://strakins.github.io/countries_demography/",
     },
   ];
   return (
