@@ -33,7 +33,7 @@ const Hero = () => {
             My Name is <span>Blessing Akinola</span>
           </h3>
           <h4 className="md:text-2xl text-lg md:leading-normal leading-5 mt-4 font-bold text-gray-600">
-            Frontend Developer
+            Web Developer
           </h4>
           <button className="btn-primary mt-8">Contact Me</button>
           <div className="mt-8 text-3xl flex items-center md:justify-start justify-center gap-5">

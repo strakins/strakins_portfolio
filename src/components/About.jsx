@@ -2,9 +2,9 @@ import React from "react";
 import aboutImg from "../assets/images/about.png";
 const About = () => {
   const info = [
-    { text: "Years experience", count: "04" },
-    { text: "Completed Projects", count: "24" },
-    { text: "Companies Work", count: "06" },
+    { text: "Years experience", count: "03" },
+    { text: "Completed Projects", count: "16" },
+    { text: "Companies Work", count: "03" },
   ];
   return (
     <section id="about" className="py-10 text-white">
@@ -24,7 +24,7 @@ const About = () => {
                 React which enables me to create highly interactive web applications.
                 When it comes to the back-end, I have a solid understanding of server-side technologies 
                 such as Node.js. I'm familiar with building RESTful APIs, working with databases 
-                (SQL and NoSQL), and implementing authentication and authorization systems to ensure data security. </span>
+                (MONGODB), and implementing authentication and authorization systems to ensure data security. </span>
                 <span className="block pt-2"> Additionally, I'm well-versed in version control systems like Git.
                 Overall, my goal as a full-stack web developer is to leverage my skills and expertise to build innovative web 
                 applications that solve real-world problems and provide an enjoyable user experience. I'm excited to take on new 

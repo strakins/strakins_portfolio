@@ -1,11 +1,10 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import project1 from "../assets/images/project-1.png";
-import project2 from "../assets/images/project-2.jpg";
-import project3 from "../assets/images/project-3.jpg";
-import project4 from "../assets/images/project-4.jpg";
-import project5 from "../assets/images/project-5.png";
-import project_person from "../assets/images/project_person1.png";
+import project2 from "../assets/images/devdetails.jpg";
+import project1 from '../assets/images/strakins_homes1.jpg'
+import project4 from "../assets/images/Totalink.jpg";
+import project5 from "../assets/images/countriesapiproject.jpg";
+import project_person from "../assets/images/hero.png";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper";
@@ -14,12 +13,12 @@ const Project = () => {
   const projects = [
     {
       img: project1,
-      name: "Ratings App",
-      github_link: "https://github.com/strakins/ratings_app",
-      live_link: "https://strakins.github.io/ratings_app/",
+      name: "Strakins Home",
+      github_link: "https://github.com/strakins/strakins_homes",
+      live_link: "https://strakins-homes.vercel.app/",
     },
     {
-      img: "https://github.com/strakins/kodecamp/blob/main/devdetails.jpg",
+      img: project2,
       name: "Portfolio Site",
       github_link: "https://github.com/strakins/Developers-Details/tree/master",
       live_link: "https://strakins.github.io/Developers-Details/",
@@ -92,7 +91,7 @@ const Project = () => {
           </Swiper>
         </div>
         <div className="lg:block hidden">
-          <img src={project_person} alt="" />
+          <img src={project_person} alt="" className="rotate-12 w-52 ml-12" />
         </div>
       </div>
     </section>

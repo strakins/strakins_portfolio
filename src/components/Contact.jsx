@@ -2,12 +2,12 @@ import React from "react";
 
 const Contact = () => {
   const contact_info = [
-    { logo: "mail", text: "akinolablessing25@gmail.com" },
-    { logo: "logo-whatsapp", text: "+234 706 300 3993" },
+    { logo: "mail", text: "akinolablessing25@gmail.com", url: "#" },
+    { logo: "logo-whatsapp", text: "+234 706 300 3993", url:"https://wa.me/2347063003993" },
     {
       logo: "location",
       text: "Osogbo, Osun State",
-    },
+      url: "#"    },
   ];
   return (
     <section id="contact" className="py-10 px-3 text-white">
@@ -34,9 +34,11 @@ const Contact = () => {
                 className="flex flex-row  
                   text-left gap-4 flex-wrap items-center"
               >
-                <div className="min-w-[3.5rem]  text-3xl min-h-[3.5rem] flex items-center justify-center text-white bg-cyan-600 rounded-full">
-                  <ion-icon name={contact.logo}></ion-icon>
-                </div>
+                <a href={contact.url} target="_blank" rel="noopener noreferrer">
+                  <div className="min-w-[3.5rem]  text-3xl min-h-[3.5rem] flex items-center justify-center text-white bg-cyan-600 rounded-full">
+                    <ion-icon name={contact.logo}></ion-icon> 
+                  </div>
+                </a>
                 <p className="md:text-base text-sm  break-words">
                   {contact.text}
                 </p>
