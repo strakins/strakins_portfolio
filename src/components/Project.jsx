@@ -2,7 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import project2 from "../assets/images/devdetails.jpg";
 import project1 from '../assets/images/strakins_homes1.jpg'
-import project4 from "../assets/images/Totalink.jpg";
+import project4 from "../assets/images/strakinsai.png";
 import project5 from "../assets/images/countriesapiproject.jpg";
 import project_person from "../assets/images/hero.png";
 import "swiper/css";
@@ -25,9 +25,9 @@ const Project = () => {
     },
     {
       img: project4,
-      name: "Traing Services",
-      github_link: "https://github.com/strakins/Totalink-Web-Services",
-      live_link: "https://totalinkservices.vercel.app/contact_us.html",
+      name: "AI Prompt App",
+      github_link: "https://github.com/strakins/AI_ASSISTANT",
+      live_link: "https://ai-assistant-strakins.vercel.app/",
     },
     {
       img: project5,
