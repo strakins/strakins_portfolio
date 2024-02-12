@@ -2,8 +2,8 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import project2 from "../assets/images/devdetails.jpg";
 import project1 from '../assets/images/strakins_homes1.jpg'
-import project4 from "../assets/images/strakinsai.png";
-import project5 from "../assets/images/countriesapiproject.jpg";
+import project4 from "../assets/images/strakinai.png";
+import project5 from "../assets/images/blogimg.png";
 import project_person from "../assets/images/hero.png";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -17,12 +17,12 @@ const Project = () => {
       github_link: "https://github.com/strakins/strakins_homes",
       live_link: "https://strakins-homes.vercel.app/",
     },
-    {
-      img: project2,
-      name: "Portfolio Site",
-      github_link: "https://github.com/strakins/Developers-Details/tree/master",
-      live_link: "https://strakins.github.io/Developers-Details/",
-    },
+    // {
+    //   img: project2,
+    //   name: "Portfolio Site",
+    //   github_link: "https://github.com/strakins/Developers-Details/tree/master",
+    //   live_link: "https://strakins.github.io/Developers-Details/",
+    // },
     {
       img: project4,
       name: "AI Prompt App",
@@ -31,9 +31,9 @@ const Project = () => {
     },
     {
       img: project5,
-      name: "Country Demography",
-      github_link: "https://github.com/strakins/countries_demography/tree/master",
-      live_link: "https://strakins.github.io/countries_demography/",
+      name: "Blog",
+      github_link: "#",
+      live_link: "https://strakins-blog.onrender.com/",
     },
   ];
   return (
