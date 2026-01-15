@@ -5,12 +5,12 @@ const Testimonials = () => {
   const testimonials = [
     {
       quote: "Blessing delivered a POS system that transformed our retail operations. Sales tracking is now 30% faster.",
-      name: "Retail Business Owner",
+      name: "Rasin Groceries Store",
       role: "Client"
     },
     {
       quote: "The e-commerce platform he built increased our mobile conversions by 40%. Exceptional work!",
-      name: "Fashion Brand CEO",
+      name: "OMIFEM CUTS",
       role: "Client"
     },
     {

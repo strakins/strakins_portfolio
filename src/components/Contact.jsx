@@ -45,7 +45,7 @@ const Contact = () => {
     {
       logo: "calendar",
       text: "Schedule a Call",
-      action: "https://calendly.com/your-calendar" // Add your Calendly link
+      action: "https://calendly.com/akinolablessing25/30min" // Add your Calendly link
     }
   ];
 
