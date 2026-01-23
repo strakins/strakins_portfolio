@@ -1,5 +1,5 @@
 import React from "react";
-import aboutImg from "../assets/images/about.png";
+import aboutImg from "../assets/images/work_area.jpg";
 
 const About = () => {
   const services = [
@@ -75,7 +75,7 @@ const About = () => {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 md:gap-4">
-              <a href="#contact" className="btn-primary bg-cyan-600 hover:bg-cyan-700 px-6 py-3">
+              <a href="/contact" className="btn-primary bg-cyan-600 hover:bg-cyan-700 px-6 py-3">
                 Discuss Your Project
               </a>
               <a href="https://drive.google.com/file/d/1oj8jtHyqaeNdBYetv9rrxW25yzemCbwY/view?usp=sharing" target="_blank" download className="border-2 rounded-full border-cyan-500 mx-auto md:mx-0 text-cyan-400 px-6 py-3">

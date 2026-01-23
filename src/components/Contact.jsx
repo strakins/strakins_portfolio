@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import emailjs from '@emailjs/browser'; // You'll need to install: npm install emailjs-com
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -51,7 +51,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-20 bg-black">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6 mt-8">
         <div className="text-center mb-16">
           <span className="text-cyan-400 font-semibold">LET'S BUILD TOGETHER</span>
           <h3 className="text-4xl font-bold text-white mt-2">
@@ -162,8 +162,8 @@ const Contact = () => {
           {/* Contact Info & CTA */}
           <div>
             <div className="mb-8">
-              <h4 className="text-2xl font-bold text-white mb-6">Why Work With Me?</h4>
-              <ul className="space-y-4">
+              <h4 className="text-xl md:text-2xl font-bold text-white mb-6">Why Work With Me?</h4>
+              <ul className="space-y-4 text-sm md:text-md">
                 {[
                   "🎯 **Business-First Approach**: Solutions designed to drive growth",
                   "⚡ **Fast Delivery**: Agile development with regular updates",
@@ -171,7 +171,6 @@ const Contact = () => {
                   "📱 **Full-Stack Expertise**: End-to-end solutions from design to deployment"
                 ].map((item, index) => (
                   <li key={index} className="text-gray-300 flex items-start">
-                    <span className="text-cyan-400 mr-3">•</span>
                     <span dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong class="text-white">$1</strong>') }} />
                   </li>
                 ))}
@@ -193,7 +192,7 @@ const Contact = () => {
                       <ion-icon name={contact.logo} className="text-cyan-400 text-xl"></ion-icon>
                     </div>
                     <div>
-                      <div className="text-white font-medium">{contact.text}</div>
+                      <div className="text-white text-[11px] font-medium">{contact.text}</div>
                       <div className="text-cyan-400 text-sm">Click to connect</div>
                     </div>
                   </a>

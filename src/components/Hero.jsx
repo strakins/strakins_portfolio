@@ -44,12 +44,12 @@ const Hero = () => {
             From POS systems to e-commerce platforms — I build software that converts users and streamlines operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <a href="#contact">
+            <a href="/contact">
               <button className="btn-primary bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-3 rounded-lg font-semibold text-sm md:text-lg transition-all hover:scale-105 shadow-lg shadow-cyan-500/30">
                 Let's Discuss Your Idea
               </button>
             </a>
-            <a href="#projects">
+            <a href="projects">
               <button className="btn-outline border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-lg font-semibold text-sm md:text-lg transition-all">
                 View Previous Projects
               </button>

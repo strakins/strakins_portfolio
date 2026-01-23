@@ -39,10 +39,10 @@ const Skills = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <span className="text-cyan-400 font-semibold">EXPERTISE THAT DELIVERS</span>
-          <h3 className="text-4xl font-bold text-white mt-2">
+          <h3 className="text-3xl md:text-4xl font-bold text-white mt-2">
             Technical Skills That <span className="text-cyan-400">Solve Problems</span>
           </h3>
-          <p className="text-gray-400 mt-4 max-w-3xl mx-auto text-lg">
+          <p className="text-gray-400 mt-4 max-w-3xl mx-auto text-sm md:text-lg">
             I combine technical expertise with business understanding to build solutions that work
           </p>
         </div>
