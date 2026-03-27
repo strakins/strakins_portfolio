@@ -1,100 +1,162 @@
-import React from "react";
+import { Link } from "react-router-dom";
+import { IoMdChatbubbles } from "react-icons/io";
+import { IoMdSearch } from "react-icons/io";
+import { FaComments } from "react-icons/fa6";
+import { FaBookOpenReader } from "react-icons/fa6";
+import { FaArrowCircleRight } from "react-icons/fa";
 
-const Skills = () => {
-  const skillCategories = [
-    {
-      category: "Frontend Development",
-      skills: [
-        { name: "React", level: 95 },
-        { name: "React Native", level: 90 },
-        { name: "Next.js", level: 88 },
-        { name: "TypeScript", level: 85 }
-      ],
-      value: "Building responsive, conversion-optimized interfaces"
-    },
-    {
-      category: "Backend & Database",
-      skills: [
-        { name: "Node.js", level: 90 },
-        { name: "MongoDB", level: 85 },
-        { name: "Firebase", level: 88 },
-        { name: "REST APIs", level: 92 }
-      ],
-      value: "Scalable architecture & real-time data handling"
-    },
-    {
-      category: "Business Solutions",
-      skills: [
-        { name: "E-commerce", level: 90 },
-        { name: "POS Systems", level: 85 },
-        { name: "Real-time Apps", level: 88 },
-        { name: "Mobile Apps", level: 92 }
-      ],
-      value: "Applications that drive business growth"
-    }
-  ];
 
-  return (
-    <section id="skills" className="py-20 bg-gray-900">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <span className="text-cyan-400 font-semibold">EXPERTISE THAT DELIVERS</span>
-          <h3 className="text-3xl md:text-4xl font-bold text-white mt-2">
-            Technical Skills That <span className="text-cyan-400">Solve Problems</span>
-          </h3>
-          <p className="text-gray-400 mt-4 max-w-3xl mx-auto text-sm md:text-lg">
-            I combine technical expertise with business understanding to build solutions that work
+const SKILL_GROUPS = [
+  {
+    label: "Core",
+    heading: "What I build with every day",
+    skills: [
+      { name: "React", note: "My primary framework. Hooks, context, custom hooks, performance optimisation." },
+      { name: "Next.js", note: "App Router, SSR, SSG, ISR, server components, route handlers." },
+      { name: "TypeScript", note: "Strict mode, generics, utility types, discriminated unions." },
+      { name: "Tailwind CSS", note: "Design systems, responsive layouts, component variants." },
+      { name: "JavaScript (ES2022+)", note: "Async/await, modules, closures, the event loop." },
+      { name: "HTML & CSS", note: "Semantic markup, accessibility, animations, grid & flexbox." },
+    ],
+  },
+  {
+    label: "Backend & Data",
+    heading: "Enough to be self-sufficient",
+    skills: [
+      { name: "Node.js / Express", note: "REST APIs, middleware, authentication." },
+      { name: "Firebase", note: "Firestore, Auth, Storage, Realtime Database." },
+      { name: "MongoDB", note: "Schema design, aggregation pipelines, Mongoose." },
+      { name: "REST APIs", note: "Design, versioning, error handling, rate limiting." },
+    ],
+  },
+  {
+    label: "Tooling & Workflow",
+    heading: "How I work efficiently",
+    skills: [
+      { name: "Git & GitHub", note: "Branching strategies, PRs, code review workflow." },
+      { name: "Vite", note: "Fast dev server, plugin ecosystem, build optimisation." },
+      { name: "Figma", note: "Reading designs, exporting assets, prototyping basic flows." },
+      { name: "Vercel / Netlify", note: "Deployments, environment variables, preview URLs." },
+      { name: "ESLint & Prettier", note: "Consistent code style across projects." },
+    ],
+  },
+  {
+    label: "Expanding",
+    heading: "Currently learning & exploring",
+    skills: [
+      { name: "React Native", note: "Cross-platform mobile apps. Built OmifemCuts with it." },
+      { name: "Web3 / Solidity", note: "Smart contracts, wallet integration, IPFS." },
+      { name: "Testing (Vitest / RTL)", note: "Unit tests, component tests, testing-library best practices." },
+      { name: "PostgreSQL", note: "SQL fundamentals, relational data modelling, Prisma ORM." },
+    ],
+  },
+];
+
+const SOFT_SKILLS = [
+  { icon: <IoMdChatbubbles/> , title: "Clear communication", desc: "I write concise updates, ask questions before making assumptions, and flag blockers early." },
+  { icon: < IoMdSearch />, title: "Attention to detail", desc: "Pixel alignment, contrast ratios, edge cases; I notice things that slip through review." },
+  { icon: < FaBookOpenReader/>, title: "Fast learner", desc: "I picked up React Native for Taxlator App." },
+  { icon: <FaComments />, title: "Feedback-driven", desc: "I don't get precious about code. If there's a better way, I want to know and I'll say the same in return." },
+];
+
+/* ── Sub-components ────────────────────────────────────── */
+const SkillCard = ({ name, note }) => (
+  <div className="group bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-blue-400/20 rounded-xl p-4 transition-all duration-200">
+    <p className="text-white font-semibold text-sm mb-1 group-hover:text-blue-400 transition-colors">
+      {name}
+    </p>
+    <p className="text-slate-500 text-xs leading-relaxed">{note}</p>
+  </div>
+);
+
+const SkillGroup = ({ label, heading, skills }) => (
+  <section aria-labelledby={`group-${label}`} className="mb-16">
+    <div className="flex items-baseline gap-3 mb-2">
+      <span className="text-blue-400 text-xs font-bold uppercase tracking-widest">{label}</span>
+    </div>
+    <h2 id={`group-${label}`} className="text-xl font-bold text-white mb-6">
+      {heading}
+    </h2>
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      {skills.map((skill) => (
+        <SkillCard key={skill.name} {...skill} />
+      ))}
+    </div>
+  </section>
+);
+
+/* ── Page ──────────────────────────────────────────────── */
+const Skills = () => (
+  <main id="skills" aria-label="Skills of Blessing Akinola, Frontend Developer">
+    {/* header */}
+    <section className="bg-slate-950 pt-28 pb-2 px-6">
+      <div className="max-w-6xl mx-auto">
+        <p className="text-blue-400 text-xs font-semibold tracking-widest uppercase mb-4">
+          Skills & tools
+        </p>
+      </div>
+    </section>
+
+    {/* skill groups */}
+    <section className="bg-slate-950 py-4 pb-20 px-6">
+      <div className="max-w-6xl mx-auto">
+        {SKILL_GROUPS.map((group) => (
+          <SkillGroup key={group.label} {...group} />
+        ))}
+      </div>
+    </section>
+
+    {/* soft skills */}
+    <section
+      className="bg-slate-900 py-20 px-6"
+      aria-label="Working style and soft skills"
+    >
+      <div className="max-w-6xl mx-auto">
+        <div className="mb-10">
+          <p className="text-blue-400 text-xs font-semibold tracking-widest uppercase mb-3">
+            My Working style
           </p>
+          <h2 className="text-3xl font-bold text-white">
+            The stuff that doesn't show up in a tech stack list
+          </h2>
         </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {skillCategories.map((category, catIndex) => (
-            <div key={catIndex} className="bg-gray-800/50 p-6 rounded-2xl hover:bg-gray-800 transition-colors">
-              <h4 className="text-xl font-bold text-white mb-4">{category.category}</h4>
-              <p className="text-cyan-400 mb-6 text-sm">{category.value}</p>
-              
-              <div className="space-y-6">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex}>
-                    <div className="flex justify-between mb-2">
-                      <span className="text-gray-300">{skill.name}</span>
-                      <span className="text-cyan-400 font-semibold">{skill.level}%</span>
-                    </div>
-                    <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
-                      <div 
-                        className="h-full bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-full"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
+        <div className="grid sm:grid-cols-2 gap-6">
+          {SOFT_SKILLS.map(({ icon, title, desc }) => (
+            <div
+              key={title}
+              className="flex gap-4 bg-slate-800/40 border border-slate-700 rounded-2xl p-6"
+            >
+              <span className="text-2xl flex-shrink-0"> {icon} </span>
+              <div>
+                <h3 className="text-white font-bold mb-1">{title}</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">{desc}</p>
               </div>
             </div>
           ))}
         </div>
+      </div>
+    </section>
 
-        <div className="mt-16 bg-gray-800/30 rounded-2xl p-8 border border-gray-700">
-          <h4 className="text-2xl font-bold text-white mb-4 text-center">
-            My Development Approach
-          </h4>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { icon: "📱", title: "Mobile-First", desc: "Responsive designs that work everywhere" },
-              { icon: "⚡", title: "Performance", desc: "Fast loading & smooth interactions" },
-              { icon: "🔧", title: "Clean Code", desc: "Scalable, maintainable architecture" },
-              { icon: "🎯", title: "Business Focus", desc: "Solutions that drive growth" }
-            ].map((item, index) => (
-              <div key={index} className="text-center p-4">
-                <div className="text-3xl mb-3">{item.icon}</div>
-                <h5 className="text-white font-semibold mb-2">{item.title}</h5>
-                <p className="text-gray-400 text-sm">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+    {/* learning note */}
+    <section className="bg-slate-950 py-16 px-6">
+      <div className="max-w-3xl mx-auto">
+        <div className="bg-blue-400/5 border border-blue-400/20 rounded-2xl p-8">
+          <p className="text-blue-400 text-xs font-bold uppercase tracking-widest mb-3">
+            A note on growth
+          </p>
+          <p className="text-slate-300 leading-relaxed mb-2">
+            I learn best by building real things. Every project I've shipped; pushed me
+            into at least one new area React Native, smart contracts, real-time databases.
+            I don't wait until I feel "ready" because that moment never comes.
+          </p>
+          <p className="text-slate-400 text-sm">
+            If you need someone who can own a feature end to end and figure out the gaps
+            along the way, that's exactly how I've worked in every project so far.
+          </p>
         </div>
       </div>
     </section>
-  );
-};
+  </main>
+);
 
 export default Skills;
