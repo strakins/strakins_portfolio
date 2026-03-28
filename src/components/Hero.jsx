@@ -102,9 +102,9 @@ const Hero = () => {
 
             <p className="text-slate-400 text-lg leading-relaxed mb-8 max-w-lg">
               Hi, I'm <strong className="text-white font-semibold">Blessing Akinola</strong> — a
-              frontend developer based in Ibadan, Nigeria. I turn Figma designs and product ideas
+              frontend developer based in Osogbo, Nigeria. I turn Figma designs and product ideas
               into clean, performant React and Next.js applications. I care about the details that
-              make a UI feel right.
+              make applications work.
             </p>
 
             {/* stack pills */}
@@ -173,7 +173,7 @@ const Hero = () => {
               <div className="absolute -inset-3 rounded-3xl border border-blue-400/20 rotate-3" aria-hidden="true" />
               <img
                 src={hero}
-                alt="Blessing Akinola, Frontend Developer based in Ibadan Nigeria"
+                alt="Blessing Akinola, Frontend Developer based in Osogbo Nigeria"
                 width={400}
                 height={480}
                 className="relative w-72 md:w-80 lg:w-[360px] rounded-2xl object-cover shadow-2xl"
