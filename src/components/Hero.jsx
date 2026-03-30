@@ -93,17 +93,17 @@ const Hero = () => {
               Open to work · Available immediately
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-[3.4rem] font-black text-white leading-[1.1] tracking-tight mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-[3.2rem] font-black text-white leading-[1.1] tracking-tight mb-6">
               I build fast,{" "}
               <span className="text-blue-400">accessible</span>{" "}
               web interfaces
-              <br className="hidden lg:block" /> people actually enjoy.
+              <br className="hidden lg:block" />that people actually enjoy.
             </h1>
 
             <p className="text-slate-400 text-lg leading-relaxed mb-8 max-w-lg">
-              Hi, I'm <strong className="text-white font-semibold">Blessing Akinola</strong> — a
-              frontend developer based in Osogbo, Nigeria. I turn Figma designs and product ideas
-              into clean, performant React and Next.js applications. I care about the details that
+              Hi, I'm <strong className="text-white font-semibold">Blessing Akinola</strong> a
+              web developer based in Osogbo, Nigeria. I turn Figma designs and product ideas
+              into clean, performant React, Next.js applications and fullstack apps. I care about the details that
               make applications work.
             </p>
 
@@ -156,7 +156,7 @@ const Hero = () => {
               ))}
               <span className="w-px h-4 bg-slate-700" />
               <a
-                href="https://drive.google.com/file/d/1oj8jtHyqaeNdBYetv9rrxW25yzemCbwY/view?usp=sharing"
+                href="https://drive.google.com/file/d/17cmYGNRcCefWX2cLVEC2_4urzshgKlZZ/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-white text-xs font-medium transition-colors"
@@ -182,7 +182,7 @@ const Hero = () => {
               {/* floating badge */}
               <div className="absolute -bottom-4 -left-4 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 shadow-xl">
                 <p className="text-slate-400 text-[10px] uppercase tracking-widest mb-0.5">Currently</p>
-                <p className="text-white text-sm font-semibold">Seeking Frontend Role</p>
+                <p className="text-white text-sm font-semibold">Seeking Web Developer Role</p>
               </div>
             </div>
 
@@ -199,7 +199,8 @@ const Hero = () => {
                 >
                   <p className="text-blue-400 text-xl font-black">
                     <span data-count={count}>0</span>
-                    {suffix}
+                    <span className="text-base ml-0.5">{suffix}</span>
+                    
                   </p>
                   <p className="text-slate-500 text-[11px] mt-0.5 leading-tight">{label}</p>
                 </div>

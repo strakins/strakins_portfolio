@@ -108,23 +108,23 @@ const About = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
               Hi, I'm Blessing, nice to meet you.
             </h2>
-            <div className="space-y-4 text-slate-400 leading-relaxed">
+            <div className="space-y-4 text-slate-400 leading-relaxed text-justify">
               <p>
                 I've been building for the web since 2020, and I genuinely enjoy it. Its not just
                 the output, but the actual process of solving layout problems, debugging weird
-                state bugs, and figuring out why a component re-renders one too many times.
+                state bugs and figuring out why a component re-renders one too many times.
               </p>
               <p>
                 My background is in React and Next.js, with a strong eye for UI detail. I've
                 worked on everything from a POS system for a local retail business to a Web3
                 ticketing platform. What ties them together is that I treat every project like
-                real users will depend on it — because they do.
+                real users will depend on it, because they actually do.
               </p>
               <p>
-                Right now I'm looking for a <strong className="text-white">frontend developer
-                role</strong> where I can contribute to a product I believe in, work with a team
-                that values code quality, and keep growing. I work well remotely and I'm used to
-                communicating across timezones.
+                Right now I'm looking for a <strong className="text-white italic">web developer
+                role</strong> where I can contribute to a product. I believe in team work and 
+                writing quality code backed with consistent growth. I work well remotely and I'm used to
+                flexible timezones.
               </p>
             </div>
 

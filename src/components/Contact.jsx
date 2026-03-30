@@ -297,7 +297,7 @@ const Contact = () => {
 
             {/* CV download */}
             <a
-              href="https://drive.google.com/file/d/1oj8jtHyqaeNdBYetv9rrxW25yzemCbwY/view?usp=sharing"
+              href="https://drive.google.com/file/d/17cmYGNRcCefWX2cLVEC2_4urzshgKlZZ/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-between w-full bg-slate-950 border border-slate-700 hover:border-blue-400/40 rounded-2xl p-5 transition-all group"
@@ -308,7 +308,7 @@ const Contact = () => {
                 </p>
                 <p className="text-slate-500 text-xs mt-0.5">PDF · Updated 2025</p>
               </div>
-              <span className="text-slate-400 group-hover:text-blue-400 transition-colors text-lg">↓</span>
+              
             </a>
           </div>
         </div>
