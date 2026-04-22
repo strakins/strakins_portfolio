@@ -121,10 +121,10 @@ const Hero = () => {
 
             <div className="flex flex-wrap gap-4">
               <Link
-                to="/contact"
+                to="/services"
                 className="inline-flex items-center gap-2 bg-blue-400 hover:bg-blue-300 text-slate-50 font-bold px-6 py-3 rounded-xl text-sm transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-400/20"
               >
-                Let's work together 
+                Learn about our Services 
               </Link>
               <Link
                 to="/projects"
